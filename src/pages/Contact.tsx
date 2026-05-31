@@ -142,7 +142,7 @@ const Contact = () => {
 
               <div className="space-y-6">
                 <a href={mailtoLink()} className="flex items-center gap-4 group">
-                  <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center group-hover:bg-red-500/20 transition-colors">
+                  <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
                     <Mail className="w-6 h-6 text-foreground" />
                   </div>
                   <div>
@@ -152,7 +152,7 @@ const Contact = () => {
                 </a>
 
                 <a href={whatsappLink()} target="_blank" rel="noreferrer" className="flex items-center gap-4 group">
-                  <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center group-hover:bg-red-500/20 transition-colors">
+                  <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
                     <Phone className="w-6 h-6 text-foreground" />
                   </div>
                   <div>
@@ -162,7 +162,7 @@ const Contact = () => {
                 </a>
 
                 <a href={site.instagram} target="_blank" rel="noreferrer" className="flex items-center gap-4 group">
-                  <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center group-hover:bg-red-500/20 transition-colors">
+                  <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
                     <Instagram className="w-6 h-6 text-foreground" />
                   </div>
                   <div>

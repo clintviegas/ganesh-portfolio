@@ -7,6 +7,7 @@ import Navigation from "./components/Navigation";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
+import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Reel from "./pages/Reel";
@@ -23,6 +24,7 @@ const App = () => (
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

@@ -29,7 +29,7 @@ const About = () => {
       {/* Hero Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-sm tracking-[0.25em] uppercase text-red-500 mb-4">
+          <p className="text-sm tracking-[0.25em] uppercase text-gold mb-4">
             The Storyteller Behind the Lens
           </p>
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
@@ -92,8 +92,8 @@ const About = () => {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             {skills.map((skill, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-red-500/10 flex items-center justify-center">
-                  <skill.icon className="w-8 h-8 text-red-500" />
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gold/10 flex items-center justify-center">
+                  <skill.icon className="w-8 h-8 text-gold" />
                 </div>
                 <div className="text-foreground font-medium">{skill.label}</div>
               </div>
@@ -141,7 +141,7 @@ const About = () => {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Button asChild className="bg-red-500 hover:bg-red-600 text-white px-8 py-6 text-base font-medium">
+            <Button asChild className="bg-gold hover:bg-gold-dark text-black px-8 py-6 text-base font-medium">
               <Link to="/projects">View Full Gallery</Link>
             </Button>
           </div>
@@ -157,7 +157,7 @@ const About = () => {
           <p className="text-xl text-muted-foreground mb-8">
             Let's collaborate on your next cinematic project.
           </p>
-          <Button size="lg" asChild className="bg-red-500 hover:bg-red-600 text-white">
+          <Button size="lg" asChild className="bg-gold hover:bg-gold-dark text-black">
             <Link to="/contact">Get In Touch</Link>
           </Button>
         </div>

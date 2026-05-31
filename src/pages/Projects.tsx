@@ -20,7 +20,7 @@ const Projects = () => {
       {/* Header */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-sm tracking-[0.25em] uppercase text-red-500 mb-4">
+          <p className="text-sm tracking-[0.25em] uppercase text-gold mb-4">
             Selected Work
           </p>
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
@@ -61,7 +61,7 @@ const Projects = () => {
               <Button
                 onClick={() => setVisible((v) => v + PAGE_SIZE)}
                 size="lg"
-                className="bg-red-500 hover:bg-red-600 text-white px-8"
+                className="bg-gold hover:bg-gold-dark text-black px-8"
               >
                 View More
                 <ChevronDown className="w-5 h-5 ml-2" />
