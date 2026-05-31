@@ -57,11 +57,11 @@ const Contact = () => {
       </section>
 
       {/* Contact Form and Info */}
-      <section className="py-20 px-6">
+      <section className="py-14 md:py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
             {/* Contact Form */}
-            <div className="bg-secondary/10 p-8 rounded-lg">
+            <div className="bg-secondary/10 p-6 sm:p-8 rounded-lg">
               <h2 className="text-2xl font-bold text-foreground mb-8">
                 Start a Project
               </h2>

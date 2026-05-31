@@ -38,17 +38,17 @@ const Reel = () => {
           </div>
 
           {/* Video Controls */}
-          <div className="flex flex-col sm:flex-row items-center justify-between mt-8 gap-4">
-            <div className="flex items-center gap-4">
-              <Button variant="hero" size="lg">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-8 gap-4">
+            <div className="grid grid-cols-1 sm:flex sm:flex-wrap sm:items-center gap-3 sm:gap-4">
+              <Button variant="hero" size="lg" className="w-full sm:w-auto">
                 <Play className="w-5 h-5 mr-2" />
                 Play Reel
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto">
                 <Download className="w-5 h-5 mr-2" />
                 Download
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto">
                 <Share2 className="w-5 h-5 mr-2" />
                 Share
               </Button>

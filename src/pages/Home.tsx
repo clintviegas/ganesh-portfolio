@@ -16,7 +16,7 @@ const Home = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center mx-0 px-[35px] my-0 py-0">
+        <div className="relative z-10 text-center px-6 sm:px-8">
           <div className="mb-8">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               Ganesh Khatri
@@ -30,13 +30,13 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mx-0 px-0 my-[4px] py-[12px]">
-            <Button size="lg" asChild className="min-w-48 bg-gold hover:bg-gold-dark text-black px-8 py-4 text-base font-medium">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-2">
+            <Button size="lg" asChild className="w-full sm:w-auto min-w-48 bg-gold hover:bg-gold-dark text-black px-8 py-4 text-base font-medium">
               <Link to="/projects">
                 Explore My Work
               </Link>
             </Button>
-            <Button variant="outline" size="lg" asChild className="min-w-48 bg-transparent border-white text-white hover:bg-white hover:text-black px-8 py-4 text-base font-medium">
+            <Button variant="outline" size="lg" asChild className="w-full sm:w-auto min-w-48 bg-transparent border-white text-white hover:bg-white hover:text-black px-8 py-4 text-base font-medium">
               <Link to="/contact">
                 Book a Service
               </Link>
@@ -46,9 +46,9 @@ const Home = () => {
       </section>
 
       {/* About Me Section */}
-      <section className="py-20 px-8 text-white bg-gradient-to-b from-[#16130e] to-[#0d0b08]">
+      <section className="py-14 md:py-20 px-5 sm:px-6 md:px-8 text-white bg-gradient-to-b from-[#16130e] to-[#0d0b08]">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Left Content */}
             <div className="space-y-8">
               <div>
@@ -80,15 +80,15 @@ const Home = () => {
 
             {/* Right Content - Stacked Photo Cards */}
             <div className="relative">
-              <div className="relative w-full max-w-lg ml-auto">
+              <div className="relative w-72 sm:w-80 h-64 mx-auto lg:ml-auto lg:mr-0">
                 {/* Background Card */}
-                <div className="absolute top-0 left-8 w-80 h-64 bg-gradient-to-br from-gold/10 to-amber-700/10 rounded-2xl transform rotate-6 backdrop-blur-sm border border-white/10"></div>
+                <div className="absolute top-0 left-6 sm:left-8 w-72 sm:w-80 h-64 bg-gradient-to-br from-gold/10 to-amber-700/10 rounded-2xl transform rotate-6 backdrop-blur-sm border border-white/10"></div>
                 
                 {/* Middle Card */}
-                <div className="absolute top-4 left-4 w-80 h-64 bg-gradient-to-br from-gold/10 to-amber-900/20 rounded-2xl transform rotate-3 backdrop-blur-sm border border-white/10"></div>
+                <div className="absolute top-4 left-3 sm:left-4 w-72 sm:w-80 h-64 bg-gradient-to-br from-gold/10 to-amber-900/20 rounded-2xl transform rotate-3 backdrop-blur-sm border border-white/10"></div>
                 
                 {/* Front Card with Image */}
-                <div className="relative w-80 h-64 bg-gradient-to-br from-[#1b1712] to-[#0d0b09] rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
+                <div className="relative w-72 sm:w-80 h-64 bg-gradient-to-br from-[#1b1712] to-[#0d0b09] rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
                   <img src="/lovable-uploads/3dfd5c1f-48c7-4ae5-b473-93205595e87d.png" alt="Ganesh Khatri filming" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 </div>
@@ -107,16 +107,16 @@ const Home = () => {
       </section>
 
       {/* My Creative Services Section */}
-      <section className="py-20 px-8 bg-background">
+      <section className="py-14 md:py-20 px-5 sm:px-6 md:px-8 bg-background">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <h2 className="text-4xl mb-6 text-gold text-center font-bold md:text-5xl">My Creative Services</h2>
             <p className="text-lg max-w-3xl mx-auto text-foreground/75">
               From breathtaking aerials to compelling visual narratives, I offer a range of services to bring your vision to life.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {/* Service Cards */}
             <Card className="bg-card/80 border border-border/50 hover:bg-card/90 transition-all duration-300 group">
               <CardHeader className="text-center">
@@ -207,9 +207,9 @@ const Home = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-background border-t border-border py-16">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="grid md:grid-cols-3 gap-12 mb-12">
+      <footer className="bg-background border-t border-border py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-12 mb-12">
             {/* Brand Section */}
             <div className="space-y-4">
               <div className="flex items-center gap-2 mb-4">
