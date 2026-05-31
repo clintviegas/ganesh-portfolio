@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { ChevronRight, Film, Camera, Mountain, VideoIcon, Users, Mail, Phone, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { site, whatsappLink, mailtoLink, inquiryLink } from '@/lib/site';
+import Reveal from '@/components/Reveal';
 const Home = () => {
   return <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -50,7 +51,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Left Content */}
-            <div className="space-y-8">
+            <Reveal className="space-y-8">
               <div>
                 <h2 className="text-4xl md:text-5xl mb-8 leading-tight text-gold font-extrabold">Meet Ganesh Khatri</h2>
                 <div className="space-y-6 text-lg leading-relaxed">
@@ -76,10 +77,10 @@ const Home = () => {
                   </Link>
                 </Button>
               </div>
-            </div>
+            </Reveal>
 
             {/* Right Content - Stacked Photo Cards */}
-            <div className="relative">
+            <Reveal delay={150} className="relative">
               <div className="relative w-72 sm:w-80 h-64 mx-auto lg:ml-auto lg:mr-0">
                 {/* Background Card */}
                 <div className="absolute top-0 left-6 sm:left-8 w-72 sm:w-80 h-64 bg-gradient-to-br from-gold/10 to-amber-700/10 rounded-2xl transform rotate-6 backdrop-blur-sm border border-white/10"></div>
@@ -101,7 +102,7 @@ const Home = () => {
                   <Film className="w-8 h-8 text-white" />
                 </div>
               </div>
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -110,17 +111,20 @@ const Home = () => {
       <section className="py-14 md:py-20 px-5 sm:px-6 md:px-8 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-4xl mb-6 text-gold text-center font-bold md:text-5xl">My Creative Services</h2>
-            <p className="text-lg max-w-3xl mx-auto text-foreground/75">
-              From breathtaking aerials to compelling visual narratives, I offer a range of services to bring your vision to life.
-            </p>
+            <Reveal>
+              <h2 className="text-4xl mb-6 text-gold text-center font-bold md:text-5xl">My Creative Services</h2>
+              <p className="text-lg max-w-3xl mx-auto text-foreground/75">
+                From breathtaking aerials to compelling visual narratives, I offer a range of services to bring your vision to life.
+              </p>
+            </Reveal>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {/* Service Cards */}
-            <Card className="bg-card/80 border border-border/50 hover:bg-card/90 transition-all duration-300 group">
+            <Reveal delay={0}>
+            <Card className="h-full bg-card/80 border border-border/50 hover:bg-card/90 hover:-translate-y-1 transition-all duration-300 group">
               <CardHeader className="text-center">
-                <div className="w-12 h-12 mx-auto mb-4 text-primary">
+                <div className="w-12 h-12 mx-auto mb-4 text-primary transition-transform duration-300 group-hover:scale-110">
                   <Film className="w-full h-full" />
                 </div>
                 <CardTitle className="text-xl font-normal text-gold">Drone Footage & Stills</CardTitle>
@@ -134,10 +138,12 @@ const Home = () => {
                 </a>
               </CardContent>
             </Card>
+            </Reveal>
 
-            <Card className="bg-card/80 border border-border/50 hover:bg-card/90 transition-all duration-300 group">
+            <Reveal delay={80}>
+            <Card className="h-full bg-card/80 border border-border/50 hover:bg-card/90 hover:-translate-y-1 transition-all duration-300 group">
               <CardHeader className="text-center">
-                <div className="w-12 h-12 mx-auto mb-4 text-primary">
+                <div className="w-12 h-12 mx-auto mb-4 text-primary transition-transform duration-300 group-hover:scale-110">
                   <Camera className="w-full h-full" />
                 </div>
                 <CardTitle className="text-xl font-normal text-gold">Video & Photo Stocks</CardTitle>
@@ -151,10 +157,12 @@ const Home = () => {
                 </a>
               </CardContent>
             </Card>
+            </Reveal>
 
-            <Card className="bg-card/80 border border-border/50 hover:bg-card/90 transition-all duration-300 group">
+            <Reveal delay={160}>
+            <Card className="h-full bg-card/80 border border-border/50 hover:bg-card/90 hover:-translate-y-1 transition-all duration-300 group">
               <CardHeader className="text-center">
-                <div className="w-12 h-12 mx-auto mb-4 text-primary">
+                <div className="w-12 h-12 mx-auto mb-4 text-primary transition-transform duration-300 group-hover:scale-110">
                   <Mountain className="w-full h-full" />
                 </div>
                 <CardTitle className="text-xl font-normal text-gold">Event &amp; Wedding Films</CardTitle>
@@ -168,10 +176,12 @@ const Home = () => {
                 </a>
               </CardContent>
             </Card>
+            </Reveal>
 
-            <Card className="bg-card/80 border border-border/50 hover:bg-card/90 transition-all duration-300 group">
+            <Reveal delay={0}>
+            <Card className="h-full bg-card/80 border border-border/50 hover:bg-card/90 hover:-translate-y-1 transition-all duration-300 group">
               <CardHeader className="text-center">
-                <div className="w-12 h-12 mx-auto mb-4 text-primary">
+                <div className="w-12 h-12 mx-auto mb-4 text-primary transition-transform duration-300 group-hover:scale-110">
                   <VideoIcon className="w-full h-full" />
                 </div>
                 <CardTitle className="text-xl font-normal text-gold">On-Demand Shooting</CardTitle>
@@ -185,10 +195,12 @@ const Home = () => {
                 </a>
               </CardContent>
             </Card>
+            </Reveal>
 
-            <Card className="bg-card/80 border border-border/50 hover:bg-card/90 transition-all duration-300 group">
+            <Reveal delay={80}>
+            <Card className="h-full bg-card/80 border border-border/50 hover:bg-card/90 hover:-translate-y-1 transition-all duration-300 group">
               <CardHeader className="text-center">
-                <div className="w-12 h-12 mx-auto mb-4 text-primary">
+                <div className="w-12 h-12 mx-auto mb-4 text-primary transition-transform duration-300 group-hover:scale-110">
                   <Users className="w-full h-full" />
                 </div>
                 <CardTitle className="text-xl font-normal text-gold">Team Bookings</CardTitle>
@@ -202,6 +214,7 @@ const Home = () => {
                 </a>
               </CardContent>
             </Card>
+            </Reveal>
           </div>
         </div>
       </section>

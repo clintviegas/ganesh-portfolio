@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { ChevronRight, Film, Camera, Mountain, VideoIcon, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { inquiryLink } from '@/lib/site';
+import Reveal from '@/components/Reveal';
 
 const services = [
   {
@@ -41,52 +42,53 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-background pt-24">
       {/* Header */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="py-16 md:py-20 px-6">
+        <Reveal className="max-w-7xl mx-auto text-center">
           <p className="text-sm tracking-[0.25em] uppercase text-gold mb-4">
             What I Offer
           </p>
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
             Creative Services
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             From breathtaking aerials to compelling visual narratives, I offer a
             range of services to bring your vision to life.
           </p>
-        </div>
+        </Reveal>
       </section>
 
       {/* Service Grid */}
-      <section className="pb-24 px-6">
+      <section className="pb-20 md:pb-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => (
-              <Card
-                key={service.title}
-                className="bg-card/80 border border-border/60 hover:border-gold/40 hover:bg-card transition-all duration-300 group"
-              >
-                <CardHeader className="text-center">
-                  <div className="w-12 h-12 mx-auto mb-4 text-gold">
-                    <service.icon className="w-full h-full" />
-                  </div>
-                  <CardTitle className="text-xl font-normal text-gold">
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <CardDescription className="mb-6 text-foreground/70">
-                    {service.description}
-                  </CardDescription>
-                  <a
-                    href={inquiryLink(service.title)}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 text-gold hover:text-gold-light transition-colors text-sm font-medium"
-                  >
-                    Inquire Now <ChevronRight className="w-4 h-4" />
-                  </a>
-                </CardContent>
-              </Card>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {services.map((service, i) => (
+              <Reveal key={service.title} delay={i * 80}>
+                <Card
+                  className="h-full bg-card/80 border border-border/60 hover:border-gold/40 hover:bg-card hover:-translate-y-1 transition-all duration-300 group"
+                >
+                  <CardHeader className="text-center">
+                    <div className="w-12 h-12 mx-auto mb-4 text-gold transition-transform duration-300 group-hover:scale-110">
+                      <service.icon className="w-full h-full" />
+                    </div>
+                    <CardTitle className="text-xl font-normal text-gold">
+                      {service.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <CardDescription className="mb-6 text-foreground/70">
+                      {service.description}
+                    </CardDescription>
+                    <a
+                      href={inquiryLink(service.title)}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 text-gold hover:text-gold-light transition-colors text-sm font-medium"
+                    >
+                      Inquire Now <ChevronRight className="w-4 h-4" />
+                    </a>
+                  </CardContent>
+                </Card>
+              </Reveal>
             ))}
           </div>
         </div>
